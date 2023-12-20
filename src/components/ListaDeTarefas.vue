@@ -2,8 +2,9 @@
 const props = defineProps(['tarefas']);
 </script>
 
-<template>
-    <ul class="list-group mt-4">
+<template> 
+    <!-- fazer um v-if para checar se existe tarefa pendente e se não tiver mostrar mensagem -->
+    <ul class="list-group mt-4"> 
         <li class="list-group-item" v-for="tarefa in props.tarefas">
             <input @change="evento => tarefa.finalizada = evento.target.checked" :checked="tarefa.finalizada"
                 :id="tarefa.titulo" type="checkbox">
